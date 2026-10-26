@@ -1,69 +1,305 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>EcoSfera — Diagnóstico inteligente de tu consumo en casa</title>
-    <meta name="description" content="Diagnostica el consumo de energía y agua de tu casa en 2 minutos, sin necesidad de tu recibo.">
-    <!-- Vinculamos el archivo de estilos CSS -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EcoHogar — Diagnóstico de consumo doméstico</title>
+<meta name="description" content="Diagnostica el consumo de luz y agua de tu casa en San Juan de Lurigancho en 3 minutos, sin necesidad de tu recibo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="page">
+  <div class="app-decor" aria-hidden="true">
+    <span class="ad-blob ad-blob--1"></span><span class="ad-blob ad-blob--2"></span>
+    <span class="ad-cloud ad-cloud--1"><svg viewBox="0 0 120 56" aria-hidden="true"><g fill="#fff"><circle cx="34" cy="34" r="17"/><circle cx="58" cy="24" r="21"/><circle cx="84" cy="33" r="16"/><rect x="28" y="32" width="64" height="18" rx="9"/></g></svg></span>
+    <span class="ad-cloud ad-cloud--2"><svg viewBox="0 0 120 56" aria-hidden="true"><g fill="#fff"><circle cx="34" cy="34" r="17"/><circle cx="58" cy="24" r="21"/><circle cx="84" cy="33" r="16"/><rect x="28" y="32" width="64" height="18" rx="9"/></g></svg></span>
+    <span class="ad-butterfly"><svg viewBox="0 0 40 30" aria-hidden="true"><path class="wing wing-l" d="M20 14C11 0 0 5 4 16C6 22 14 22 20 16Z" fill="#F29AB0"/><path class="wing wing-r" d="M20 14C29 0 40 5 36 16C34 22 26 22 20 16Z" fill="#F7B267"/><ellipse cx="20" cy="15" rx="1.6" ry="8" fill="#5B4636"/><path d="M19 8Q16 3 13 3M21 8Q24 3 27 3" stroke="#5B4636" stroke-width="1" fill="none" stroke-linecap="round"/></svg></span>
+    <svg class="ad-wave ad-wave--2" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60C240 20 480 100 720 60C960 20 1200 100 1440 60C1680 20 1920 100 2160 60C2400 20 2640 100 2880 60V120H0Z" fill="#BFE0CB"/></svg>
+    <svg class="ad-wave ad-wave--1" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60C240 20 480 100 720 60C960 20 1200 100 1440 60C1680 20 1920 100 2160 60C2400 20 2640 100 2880 60V120H0Z" fill="#D6EBDD"/></svg>
+    <span class="ad-plant ad-plant--left"><svg viewBox="0 0 170 230" aria-hidden="true"><path d="M80 220C76 180 68 140 46 92" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(77 196) rotate(-45.0) scale(1.0)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(72 166) rotate(-135.0) scale(0.92)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#3FA56E"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(63 136) rotate(-45.0) scale(0.84)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#7CC79A"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(54 112) rotate(-135.0) scale(0.76)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#2F7D58"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(46 92) rotate(-45.0) scale(0.6799999999999999)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#63B784"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><path d="M80 220C84 176 98 140 124 100" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(82 192) rotate(-135.0) scale(1.0)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(88 162) rotate(-45.0) scale(0.92)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#3FA56E"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(100 136) rotate(-135.0) scale(0.84)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#7CC79A"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(112 116) rotate(-45.0) scale(0.76)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#2F7D58"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(124 100) rotate(-135.0) scale(0.6799999999999999)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#63B784"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><path d="M80 220C80 160 84 100 86 40" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(80 200) rotate(-45.0) scale(1.0)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(80 172) rotate(-135.0) scale(0.92)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#3FA56E"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(82 144) rotate(-45.0) scale(0.84)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#7CC79A"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(83 116) rotate(-135.0) scale(0.76)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#2F7D58"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(85 88) rotate(-45.0) scale(0.6799999999999999)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#63B784"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(86 62) rotate(-135.0) scale(0.6)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(86 40) rotate(-45.0) scale(0.52)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#3FA56E"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><ellipse cx="80" cy="224" rx="46" ry="5" fill="#CFE6D7"/></svg></span>
+    <span class="ad-plant ad-plant--right"><svg viewBox="0 0 160 230" aria-hidden="true"><path d="M80 172Q50.0 132.0 36 92" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M80 172Q88.0 115.0 80 58" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M80 172Q94.0 133.0 124 94" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M80 172Q74.0 150.0 52 128" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M80 172Q86.0 151.0 108 130" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M80 172Q88.0 136.0 80 100" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(36 92) rotate(-118.8) scale(1.35)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(80 58) rotate(-90.0) scale(1.35)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#3FA56E"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(124 94) rotate(-60.6) scale(1.35)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#7CC79A"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(52 128) rotate(-122.5) scale(1.1)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#2F7D58"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(108 130) rotate(-56.3) scale(1.1)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#63B784"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(80 100) rotate(-90.0) scale(1.1)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><path d="M46 170h68l-8 52H54z" fill="#C9835B"/><rect x="42" y="164" width="76" height="14" rx="5" fill="#B8734B"/><path d="M58 190h44" stroke="#fff" stroke-opacity=".25" stroke-width="3" stroke-linecap="round"/></svg></span>
+    <span class="ad-leaf ad-leaf--1"><svg viewBox="0 0 40 26" aria-hidden="true"><path d="M2 13C10 0 30 0 38 13C30 26 10 26 2 13Z" fill="#7CC79A"/><path d="M6 13H34" stroke="#fff" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="ad-leaf ad-leaf--2"><svg viewBox="0 0 40 26" aria-hidden="true"><path d="M2 13C10 0 30 0 38 13C30 26 10 26 2 13Z" fill="#4FA36F"/><path d="M6 13H34" stroke="#fff" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="ad-leaf ad-leaf--3"><svg viewBox="0 0 40 26" aria-hidden="true"><path d="M2 13C10 0 30 0 38 13C30 26 10 26 2 13Z" fill="#A8DBBB"/><path d="M6 13H34" stroke="#fff" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="ad-leaf ad-leaf--4"><svg viewBox="0 0 40 26" aria-hidden="true"><path d="M2 13C10 0 30 0 38 13C30 26 10 26 2 13Z" fill="#63B784"/><path d="M6 13H34" stroke="#fff" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="ad-leaf ad-leaf--5"><svg viewBox="0 0 40 26" aria-hidden="true"><path d="M2 13C10 0 30 0 38 13C30 26 10 26 2 13Z" fill="#7CC79A"/><path d="M6 13H34" stroke="#fff" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="ad-leaf ad-leaf--6"><svg viewBox="0 0 40 26" aria-hidden="true"><path d="M2 13C10 0 30 0 38 13C30 26 10 26 2 13Z" fill="#A8DBBB"/><path d="M6 13H34" stroke="#fff" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+  </div>
   <div class="app-shell">
-
-    <div class="app-bar">
-      <div class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 14c0-6 4-10 10-10 2 3 2 7 0 10-3 3-7 3-10 0z"/>
-          <path d="M6 18c3-4 8-8 12-9"/>
-        </svg>
+    <header class="app-bar">
+      <div class="brand">
+        <img class="brand-mark" src="img/logo.png" alt="Logo de EcoHogar">
+        <span class="brand-name">EcoHogar</span>
       </div>
-      <span class="brand-name">EcoSfera</span>
-    </div>
+      <nav class="app-nav" aria-label="Navegación principal">
+        <button class="nav-link is-active" data-view="view-intro" type="button">Inicio</button>
+        <button class="nav-link" data-view="view-como" type="button">Cómo funciona</button>
+        <button class="nav-link" data-view="view-results" type="button">Resultados</button>
+        <button class="nav-link" data-view="view-tools" type="button">Herramientas</button>
+        <button class="nav-link" data-view="view-acerca" type="button">Acerca de</button>
+      </nav>
+      <button id="btn-premium-badge" class="nav-premium" type="button">✨ Hazte Premium</button>
+      <button id="btn-top-login" class="nav-status" type="button">Iniciar sesión</button>
+    </header>
 
     <main>
       <!-- ============ INTRO ============ -->
       <section id="view-intro" class="view is-active" aria-labelledby="intro-title">
-        <svg class="intro-graphic" viewBox="0 0 220 170" fill="none" xmlns="http://w3.org" role="img" aria-label="Ilustración de una casa con íconos de energía, agua y ahorro ecológico">
-          <ellipse cx="110" cy="150" rx="86" ry="10" fill="#E4F1E7"/>
-          <path d="M55 92 L110 48 L165 92 V140 H55 Z" fill="#FFFFFF" stroke="#28744F" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M45 96 L110 44 L175 96" fill="none" stroke="#28744F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <rect x="95" y="106" width="30" height="34" rx="2" fill="#E4F1E7" stroke="#28744F" stroke-width="2.5"/>
-          <circle cx="176" cy="66" r="20" fill="#F0B93D" opacity=".18"/>
-          <path d="M180 54 L170 70 H179 L173 84 L188 64 H178 Z" fill="#F0B93D"/>
-          <circle cx="36" cy="112" r="18" fill="#2AA9BC" opacity=".16"/>
-          <path d="M36 100c7 8 10 13 10 18a10 10 0 1 1-20 0c0-5 3-10 10-18z" fill="#2AA9BC"/>
-          <path d="M62 122c3-7 7-12 13-15-2 8-2 15 3 21-7 2-13-1-16-6z" fill="#2F8F5C"/>
-        </svg>
-
-        <h1 id="intro-title" class="intro-title">EcoSfera</h1>
-        <p class="intro-slogan">Diagnostica el consumo de tu casa en 2 minutos, sin necesidad de tu recibo</p>
-
-        <div class="badge-row" aria-hidden="true">
-          <span class="badge b-energy">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
-            Energía
-          </span>
-          <span class="badge b-water">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 5 7 9 7 13a7 7 0 1 1-14 0c0-4 3-8 7-13z"/></svg>
-            Agua
-          </span>
-          <span class="badge b-eco">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14C5 7 9 3 19 3c0 10-4 14-11 14H5z"/><path d="M5 21c2-5 6-8 10-9"/></svg>
-            Ahorro
-          </span>
+        <div class="intro-hero">
+        <div class="intro-decor" aria-hidden="true">
+          <span class="decor-plant decor-plant--left"><svg viewBox="0 0 170 230" aria-hidden="true"><path d="M80 220C76 180 68 140 46 92" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(77 196) rotate(-135) scale(1.0)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(72 166) rotate(-225) scale(0.92)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#3FA56E"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(63 136) rotate(-135) scale(0.84)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#7CC79A"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(54 112) rotate(-225) scale(0.76)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#2F7D58"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(46 92) rotate(-135) scale(0.6799999999999999)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#63B784"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><path d="M80 220C84 176 98 140 124 100" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(82 192) rotate(-225) scale(1.0)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(88 162) rotate(-135) scale(0.92)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#3FA56E"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(100 136) rotate(-225) scale(0.84)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#7CC79A"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(112 116) rotate(-135) scale(0.76)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#2F7D58"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(124 100) rotate(-225) scale(0.6799999999999999)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#63B784"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><path d="M80 220C80 160 84 100 86 40" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(80 200) rotate(-135) scale(1.0)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(80 172) rotate(-225) scale(0.92)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#3FA56E"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(82 144) rotate(-135) scale(0.84)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#7CC79A"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(83 116) rotate(-225) scale(0.76)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#2F7D58"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(85 88) rotate(-135) scale(0.6799999999999999)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#63B784"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(86 62) rotate(-225) scale(0.6)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(86 40) rotate(-135) scale(0.6)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#3FA56E"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><ellipse cx="80" cy="224" rx="46" ry="5" fill="#CFE6D7"/></svg></span>
+          <span class="decor-plant decor-plant--right"><svg viewBox="0 0 170 230" aria-hidden="true"><path d="M80 220C76 180 68 140 46 92" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(77 196) rotate(-135) scale(1.0)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(72 166) rotate(-225) scale(0.92)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#3FA56E"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(63 136) rotate(-135) scale(0.84)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#7CC79A"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(54 112) rotate(-225) scale(0.76)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#2F7D58"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(46 92) rotate(-135) scale(0.6799999999999999)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#63B784"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><path d="M80 220C84 176 98 140 124 100" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(82 192) rotate(-225) scale(1.0)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(88 162) rotate(-135) scale(0.92)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#3FA56E"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(100 136) rotate(-225) scale(0.84)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#7CC79A"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(112 116) rotate(-135) scale(0.76)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#2F7D58"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(124 100) rotate(-225) scale(0.6799999999999999)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#63B784"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><path d="M80 220C80 160 84 100 86 40" stroke="#2F7D58" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(80 200) rotate(-135) scale(1.0)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(80 172) rotate(-225) scale(0.92)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#3FA56E"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(82 144) rotate(-135) scale(0.84)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#7CC79A"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(83 116) rotate(-225) scale(0.76)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#2F7D58"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(85 88) rotate(-135) scale(0.6799999999999999)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#63B784"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(86 62) rotate(-225) scale(0.6)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#4FA36F"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><g transform="translate(86 40) rotate(-135) scale(0.6)"><path d="M0 0C8-13 27-13 36 0C27 13 8 13 0 0Z" fill="#3FA56E"/><path d="M4 0H30" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round"/></g><ellipse cx="80" cy="224" rx="46" ry="5" fill="#CFE6D7"/></svg></span>
+          <span class="decor-leaf decor-leaf--1"><svg viewBox="0 0 40 26" aria-hidden="true"><path d="M2 13C10 0 30 0 38 13C30 26 10 26 2 13Z" fill="#7CC79A"/><path d="M6 13H34" stroke="#fff" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          <span class="decor-leaf decor-leaf--2"><svg viewBox="0 0 40 26" aria-hidden="true"><path d="M2 13C10 0 30 0 38 13C30 26 10 26 2 13Z" fill="#4FA36F"/><path d="M6 13H34" stroke="#fff" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          <span class="decor-leaf decor-leaf--3"><svg viewBox="0 0 40 26" aria-hidden="true"><path d="M2 13C10 0 30 0 38 13C30 26 10 26 2 13Z" fill="#A8DBBB"/><path d="M6 13H34" stroke="#fff" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          <span class="decor-leaf decor-leaf--4"><svg viewBox="0 0 40 26" aria-hidden="true"><path d="M2 13C10 0 30 0 38 13C30 26 10 26 2 13Z" fill="#63B784"/><path d="M6 13H34" stroke="#fff" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          <span class="decor-leaf decor-leaf--5"><svg viewBox="0 0 40 26" aria-hidden="true"><path d="M2 13C10 0 30 0 38 13C30 26 10 26 2 13Z" fill="#7CC79A"/><path d="M6 13H34" stroke="#fff" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round"/></svg></span>
         </div>
 
-        <button class="btn btn-primary" id="btn-start" type="button">Comenzar diagnóstico</button>
+        <div class="intro-copy">
+          <span class="intro-eyebrow">Casa eficiente</span>
+          <h1 id="intro-title" class="intro-title">Tu hogar también puede ahorrar</h1>
+          <p class="intro-quote">“Sin recibo, solo preguntas”</p>
+          <p class="intro-slogan">Responde 15 preguntas fáciles sobre tu casa y descubre tu consumo aproximado de energía y agua. Recibe 3 consejos personalizados para reducir tu gasto.</p>
+          <button class="btn btn-primary" id="btn-start" type="button">Comenzar ahora <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <ul class="intro-meta" aria-hidden="true">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>3 minutos</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10v18l-2.5-1.5L12 21l-2.5-1.5L7 21V3z"/><path d="M4 4l16 16"/></svg>Sin recibo</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/><path d="M4 4l16 16"/></svg>Sin sensores</li>
+          </ul>
+        </div>
+
+        <div class="intro-visual" aria-hidden="true">
+          <svg class="intro-illustration" viewBox="0 0 360 340">
+            <circle cx="180" cy="180" r="150" fill="#E3F1E7"/>
+            <ellipse cx="180" cy="292" rx="132" ry="14" fill="#CFE6D7"/>
+            <!-- foco -->
+            <g transform="translate(14 -18)">
+            <circle class="bulb-glow" cx="196" cy="52" r="30" fill="#F7C948" opacity=".22"/>
+            <circle cx="196" cy="52" r="17" fill="#F7C948"/>
+            <rect x="188" y="66" width="16" height="9" rx="2.5" fill="#8AA79A"/>
+            <g class="bulb-rays" stroke="#F7C948" stroke-width="3" stroke-linecap="round"><path d="M196 12v8M166 24l6 6M226 24l-6 6M156 52h8M228 52h8"/></g>
+            </g>
+            <!-- gota -->
+            <g class="drop-anim">
+            <path d="M296 96c14 18 22 30 22 42a22 22 0 0 1-44 0c0-12 8-24 22-42z" fill="#6CC0EA"/>
+            <ellipse cx="288" cy="140" rx="4" ry="8" fill="#fff" opacity=".55" transform="rotate(20 288 140)"/>
+            </g>
+            <!-- casa -->
+            <rect x="112" y="172" width="136" height="112" rx="6" fill="#F8F4E4"/>
+            <polygon points="92,182 180,98 268,182" fill="#2F7D58" stroke="#2F7D58" stroke-width="10" stroke-linejoin="round"/>
+            <rect x="152" y="206" width="56" height="58" rx="6" fill="#3D9C7F"/>
+            <path d="M180 206v58M152 235h56" stroke="#fff" stroke-width="4"/>
+            <rect x="126" y="272" width="108" height="6" rx="3" fill="#E6DFC6"/>
+            <!-- brote en el techo -->
+            <g class="sprout-anim">
+            <path d="M180 100V82" stroke="#2F7D58" stroke-width="4" stroke-linecap="round"/>
+            <path d="M180 84c-14 0-20-9-18-20 12 0 19 8 18 20z" fill="#5DBB84"/>
+            <path d="M180 84c14 0 20-9 18-20-12 0-19 8-18 20z" fill="#3FA56E"/>
+            </g>
+            <!-- enredadera y flores -->
+            <path d="M120 274C112 250 128 236 118 214C112 200 122 190 120 180" stroke="#3FA56E" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M118 236c-10-2-14-10-12-16 8 0 13 6 12 16zM122 200c9-1 14-8 12-14-8-1-13 5-12 14z" fill="#5DBB84"/>
+            <circle cx="132" cy="262" r="5" fill="#F7C948"/><circle cx="132" cy="262" r="2" fill="#fff"/>
+            <circle cx="228" cy="266" r="5" fill="#F29AB0"/><circle cx="228" cy="266" r="2" fill="#fff"/>
+            <path d="M150 288c0-8 2-14 6-18M158 288c1-7 4-12 9-15M196 288c-1-7-4-12-9-15M204 288c0-8-2-14-6-18" stroke="#3FA56E" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- plantas -->
+            <g class="bush-anim bush-l">
+              <path d="M112 288c-24-4-32-24-28-44 22 4 32 22 28 44z" fill="#4FA36F"/>
+              <path d="M112 288c-8-10-10-24-6-38" stroke="#2F7D58" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M92 290c-14-2-20-14-18-26 13 2 20 12 18 26z" fill="#7CC79A"/>
+            </g>
+            <g class="bush-anim bush-r">
+              <path d="M248 288c24-4 32-24 28-44-22 4-32 22-28 44z" fill="#4FA36F"/>
+              <path d="M248 288c8-10 10-24 6-38" stroke="#2F7D58" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M268 290c14-2 20-14 18-26-13 2-20 12-18 26z" fill="#7CC79A"/>
+            </g>
+            <!-- destellos -->
+            <g class="sparkle sp1" transform="translate(74 120)"><path d="M0-9L2.5-2.5 9 0 2.5 2.5 0 9-2.5 2.5-9 0-2.5-2.5z" fill="#F7C948"/></g>
+            <g class="sparkle sp2" transform="translate(300 214)"><path d="M0-8L2-2 8 0 2 2 0 8-2 2-8 0-2-2z" fill="#FFFFFF"/></g>
+            <g class="sparkle sp3" transform="translate(58 236)"><path d="M0-7L2-2 7 0 2 2 0 7-2 2-7 0-2-2z" fill="#F29AB0"/></g>
+            <g class="sparkle sp4" transform="translate(262 70)"><path d="M0-8L2-2 8 0 2 2 0 8-2 2-8 0-2-2z" fill="#6CC0EA"/></g>
+          </svg>
+            <span class="hx-float hx-float--luz"><i><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></i>Luz en kWh y soles</span>
+            <span class="hx-float hx-float--agua"><i><svg viewBox="0 0 24 24"><path d="M12 3c3.5 4.2 6 7.2 6 10.2a6 6 0 0 1-12 0C6 10.2 8.5 7.2 12 3z"/></svg></i>Agua en m³ y soles</span>
+            <span class="hx-float hx-float--ahorro"><i><svg viewBox="0 0 24 24"><path d="M5 20c0-8 4-14 15-15 0 11-6 15-13 15-1 0-2 0-2-.1z"/><path d="M5 20c2-5 5-8 9-10"/></svg></i>3 consejos para ahorrar</span>
+        </div>
+        </div>
+
+        <div class="home-extra">
+
+          <!-- Cifras -->
+          <div class="hx-stats reveal">
+            <div class="hx-stat"><b data-count="15">15</b><span>preguntas fáciles</span></div>
+            <div class="hx-stat"><b data-count="3">3</b><span>minutos para terminar</span></div>
+            <div class="hx-stat"><b data-count="2">2</b><span>servicios: luz y agua</span></div>
+            <div class="hx-stat"><b data-count="3">3</b><span>consejos a tu medida</span></div>
+          </div>
+
+          <!-- Qué analizamos -->
+          <section class="hx-section" aria-labelledby="hx-t1">
+            <div class="hx-head reveal">
+              <span class="hx-eyebrow">Qué analizamos</span>
+              <h2 id="hx-t1">Tu luz, tu agua y cuánto puedes ahorrar</h2>
+              <p>Convertimos tus hábitos en consumo real y los pasamos a soles con las tarifas de San Juan de Lurigancho.</p>
+            </div>
+            <div class="hx-cards">
+              <article class="hx-card reveal" style="--d:.05s">
+                <div class="hx-ico hx-ico--luz"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></div>
+                <span class="hx-tag hx-tag--luz">Luz · Pluz Energía</span>
+                <h3>Electricidad en kWh y soles</h3>
+                <ul>
+                  <li>Terma, TV, aire acondicionado, cocina y más</li>
+                  <li>Tarifa residencial oficial de Pluz Energía</li>
+                  <li>Tu consumo mensual aproximado en kWh</li>
+                </ul>
+              </article>
+              <article class="hx-card reveal" style="--d:.15s">
+                <div class="hx-ico hx-ico--agua"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3.5 4.2 6 7.2 6 10.2a6 6 0 0 1-12 0C6 10.2 8.5 7.2 12 3z"/></svg></div>
+                <span class="hx-tag hx-tag--agua">Agua · Sedapal</span>
+                <h3>Agua en m³ y soles</h3>
+                <ul>
+                  <li>Duchas, lavadora, riego y fugas</li>
+                  <li>Tarifa de Sedapal por tramos, con impuestos</li>
+                  <li>Tu consumo mensual aproximado en m³</li>
+                </ul>
+              </article>
+              <article class="hx-card reveal" style="--d:.25s">
+                <div class="hx-ico hx-ico--ahorro"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20c0-8 4-14 15-15 0 11-6 15-13 15-1 0-2 0-2-.1z"/><path d="M5 20c2-5 5-8 9-10"/></svg></div>
+                <span class="hx-tag hx-tag--ahorro">Ahorro · Consejos</span>
+                <h3>Qué hacer para gastar menos</h3>
+                <ul>
+                  <li>Descubres cuál es tu mayor consumidor</li>
+                  <li>3 consejos con el ahorro estimado en soles</li>
+                  <li>Reporte en PDF para descargar</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <!-- Cómo funciona -->
+          <section class="hx-section" aria-labelledby="hx-t2">
+            <div class="hx-head reveal">
+              <span class="hx-eyebrow">Cómo funciona</span>
+              <h2 id="hx-t2">Tres pasos y listo</h2>
+            </div>
+            <div class="hx-steps">
+              <div class="hx-step reveal" style="--d:.05s">
+                <div class="hx-step-n" style="--d:0s">1</div>
+                <h3>Responde</h3>
+                <p>15 preguntas fáciles sobre las personas, los equipos y los hábitos de tu casa.</p>
+              </div>
+              <div class="hx-step reveal" style="--d:.15s">
+                <div class="hx-step-n" style="--d:1.2s">2</div>
+                <h3>Calculamos</h3>
+                <p>Pasamos tus respuestas a kWh y m³ y aplicamos las tarifas de Pluz y Sedapal.</p>
+              </div>
+              <div class="hx-step reveal" style="--d:.25s">
+                <div class="hx-step-n" style="--d:2.4s">3</div>
+                <h3>Ahorra</h3>
+                <p>Recibes tu nivel de gasto, tu mayor consumidor y 3 consejos para bajar tu recibo.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Prueba rápida -->
+          <section class="hx-section" aria-labelledby="hx-t3">
+            <div class="hx-head reveal">
+              <span class="hx-eyebrow">Prueba rápida</span>
+              <h2 id="hx-t3">¿Cuánto cuesta usar tus equipos?</h2>
+              <p>Elige un equipo y mueve las horas de uso para ver cuánto suma cada mes en tu recibo de luz.</p>
+            </div>
+            <div class="hx-calc reveal" id="hx-calc">
+              <div class="hx-calc-in">
+                <span class="hx-label" id="hx-eq-label">Equipo</span>
+                <div class="hx-chips" id="hx-chips" role="group" aria-labelledby="hx-eq-label"></div>
+                <label class="hx-label" for="hx-hours">Horas de uso al día: <output id="hx-hours-out">1 h</output></label>
+                <input class="hx-range" type="range" id="hx-hours" min="0.5" max="12" step="0.5" value="1">
+              </div>
+              <div class="hx-calc-out" aria-live="polite">
+                <span class="hx-label">Te cuesta al mes</span>
+                <div class="hx-big">S/ <span id="hx-soles" data-v="0">0</span></div>
+                <div class="hx-meter" aria-hidden="true"><i id="hx-bar"></i></div>
+                <div class="hx-mini">
+                  <div><b><span id="hx-kwh" data-v="0">0</span> kWh</b><span>al mes</span></div>
+                  <div><b>S/ <span id="hx-year" data-v="0">0</span></b><span>al año</span></div>
+                </div>
+                <p class="hx-note" id="hx-note"></p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Sabías que -->
+          <section class="hx-section" aria-labelledby="hx-t4">
+            <div class="hx-facts reveal" id="hx-facts">
+              <span class="hx-bub hx-bub--1"></span><span class="hx-bub hx-bub--2"></span><span class="hx-bub hx-bub--3"></span>
+              <h2 class="hx-facts-title" id="hx-t4">¿Sabías que…?</h2>
+              <div class="hx-fact" id="hx-fact" aria-live="polite">
+                <span class="hx-fact-tag" id="hx-fact-tag"></span>
+                <p class="hx-fact-text" id="hx-fact-text"></p>
+              </div>
+              <div class="hx-dots" id="hx-dots" role="tablist" aria-label="Datos curiosos"></div>
+            </div>
+          </section>
+
+          <!-- Consejos que pasan -->
+          <div class="hx-marquee reveal" aria-label="Consejos rápidos para ahorrar">
+            <div class="hx-track" id="hx-track">
+              <span class="hx-pill">Apaga lo que no usas</span>
+              <span class="hx-pill">Duchas de 5 minutos</span>
+              <span class="hx-pill">Revisa si hay fugas</span>
+              <span class="hx-pill">Desenchufa los cargadores</span>
+              <span class="hx-pill">Cambia a focos LED</span>
+              <span class="hx-pill">Lava con la lavadora llena</span>
+              <span class="hx-pill">Aire acondicionado a 24°C</span>
+              <span class="hx-pill">Riega temprano con balde</span>
+              <span class="hx-pill">Tapa las ollas al cocinar</span>
+            </div>
+          </div>
+
+          <!-- Preguntas frecuentes -->
+          <section class="hx-section" aria-labelledby="hx-t5">
+            <div class="hx-head reveal">
+              <span class="hx-eyebrow">Preguntas frecuentes</span>
+              <h2 id="hx-t5">Antes de empezar</h2>
+            </div>
+            <div class="hx-faq reveal">
+              <details>
+                <summary>¿Necesito mi recibo de luz o de agua?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <p>No. Solo respondes preguntas sobre tus equipos y tus hábitos. Nosotros los convertimos a kWh y m³ y aplicamos las tarifas para estimar cuánto pagas.</p>
+              </details>
+              <details>
+                <summary>¿Qué tan exacto es el resultado?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <p>Es una aproximación. Las tarifas son las reales de Pluz Energía y Sedapal, pero tus consumos se estiman a partir de tus respuestas. Tu recibo puede variar, por ejemplo por el alumbrado público y otros cargos.</p>
+              </details>
+              <details>
+                <summary>¿Se guardan mis datos?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <p>Tus diagnósticos se guardan solo en tu propio navegador. No se envían a ningún servidor.</p>
+              </details>
+              <details>
+                <summary>¿Sirve si no vivo en San Juan de Lurigancho?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <p>Está pensado para San Juan de Lurigancho. En otros distritos de Lima el agua también es de Sedapal, pero la luz puede ser de Luz del Sur, con otro precio por kWh.</p>
+              </details>
+              <details>
+                <summary>¿Tiene costo?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                <p>El diagnóstico es gratis. Hay funciones Premium opcionales, como el simulador de ahorro.</p>
+              </details>
+            </div>
+          </section>
+
+          <!-- Cierre -->
+          <section class="hx-cta reveal" aria-labelledby="hx-t6">
+            <span class="hx-bub hx-bub--1"></span><span class="hx-bub hx-bub--2"></span><span class="hx-bub hx-bub--3"></span><span class="hx-bub hx-bub--4"></span>
+            <h2 id="hx-t6">¿Listo para saber cuánto gasta tu hogar?</h2>
+            <p>Gratis, sin recibo y en solo 3 minutos.</p>
+            <button class="btn" type="button" data-start>Comenzar mi diagnóstico <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </section>
+
+        </div>
       </section>
 
       <!-- ============ QUIZ ============ -->
       <section id="view-quiz" class="view" aria-labelledby="quiz-question-text">
         <div class="quiz-progress">
-          <div class="quiz-progress-track">
-            <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
-          </div>
+          <div class="quiz-ticks" id="quiz-ticks" aria-hidden="true"></div>
           <p class="quiz-progress-label" id="quiz-progress-label">Pregunta 1 de 6</p>
         </div>
 
@@ -71,95 +307,283 @@
           <div class="quiz-icon" id="quiz-icon" aria-hidden="true"></div>
           <h2 class="quiz-question" id="quiz-question-text"></h2>
           <div class="options" id="quiz-options" role="radiogroup" aria-labelledby="quiz-question-text"></div>
-
           <div class="quiz-nav">
-            <button class="btn btn-ghost" id="btn-back" type="button">Atrás</button>
-            <button class="btn btn-ghost" id="btn-next" type="button" style="display:none;">Siguiente</button>
+            <button class="btn btn-ghost" id="btn-back" type="button">← Volver</button>
+            <button class="btn btn-primary" id="btn-next" type="button" style="display:none;">Siguiente →</button>
           </div>
         </div>
       </section>
 
       <!-- ============ RESULTS ============ -->
       <section id="view-results" class="view" aria-live="polite">
-        <!-- Pantalla 1: Diagnóstico general -->
         <div class="result-screen is-active" data-screen="1">
-          <h2 class="result-heading">Tu diagnóstico general</h2>
-          <p class="result-sub" id="result-level-text"></p>
-
+          <h2 class="result-heading">Tu diagnóstico</h2>
+          <p class="result-sub">Según tus respuestas, tu gasto estimado mensual en energía y agua es:</p>
           <div class="gauge-wrap" id="gauge-wrap">
             <svg class="gauge-svg" viewBox="0 0 220 130">
-              <path class="gauge-track" d="M20 110 A90 90 0 0 1 200 110"/>
-              <path class="gauge-fill" id="gauge-fill" d="M20 110 A90 90 0 0 1 200 110"/>
+              <path class="gauge-track" d="M20 110 A90 90 0 0 1 200 110" pathLength="251"/>
+              <path class="gauge-fill" id="gauge-fill" d="M20 110 A90 90 0 0 1 200 110" pathLength="251"/>
             </svg>
             <div class="gauge-number" id="gauge-number">S/ 0</div>
-            <div class="gauge-caption">estimado al mes</div>
+            <div class="gauge-caption" id="gauge-caption">estimado al mes</div>
             <span class="level-pill" id="level-pill">—</span>
           </div>
-
-          <div class="results-nav">
-            <button class="btn btn-primary" data-goto="2" type="button">Ver mi mayor consumidor</button>
+          <div class="callout">
+            <div class="callout-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14C5 7 9 3 19 3c0 10-4 14-11 14H5z"/><path d="M5 21c2-5 6-8 10-9"/></svg></div>
+            <p id="result-level-text"></p>
           </div>
+          <p id="tarifa-note" style="margin-top:12px;font-size:.78rem;color:var(--text-faint);text-align:center;"></p>
+          <div id="tramo-callout" class="tramo-callout" style="display:none;"></div>
+          <div class="results-nav"><button class="btn btn-primary" data-goto="2" type="button">Ver mi mayor consumidor →</button></div>
         </div>
 
-        <!-- Pantalla 2: Mayor consumidor -->
         <div class="result-screen" data-screen="2">
-          <h2 class="result-heading">Lo que más pesa en tu recibo</h2>
+          <h2 class="result-heading">El que más gasta es…</h2>
           <p class="result-sub">Este hábito o equipo es el que más aporta a tu gasto mensual</p>
-
           <div class="consumer-card">
             <div class="consumer-icon" id="consumer-icon" aria-hidden="true"></div>
             <div class="consumer-name" id="consumer-name">—</div>
             <div class="consumer-cost" id="consumer-cost">S/ 0 / mes</div>
+            <span class="share-pill" id="consumer-share"></span>
             <p class="consumer-desc" id="consumer-desc"></p>
           </div>
-
-          <div class="results-nav">
-            <button class="btn btn-primary" data-goto="3" type="button">Ver mis 3 consejos</button>
+          <div id="consumer-others-wrap">
+            <h3 class="sub-heading">También consumen:</h3>
+            <div class="other-list" id="consumer-others"></div>
           </div>
+          <div class="results-nav"><button class="btn btn-primary" data-goto="3" type="button">Ver mis 3 consejos →</button></div>
         </div>
 
-        <!-- Pantalla 3: Consejos -->
         <div class="result-screen" data-screen="3">
           <h2 class="result-heading">3 consejos para ti</h2>
           <p class="result-sub">Aplícalos este mes y compáralos con tu próximo recibo</p>
-
           <div class="tip-list" id="tip-list"></div>
-
-          <div class="results-nav">
-            <button class="btn btn-primary" data-goto="4" type="button">Guardar mi diagnóstico</button>
-          </div>
+          <div class="results-nav"><button class="btn btn-primary" data-goto="4" type="button">Guardar mi diagnóstico →</button></div>
         </div>
 
-        <!-- Pantalla 4: Recordatorio -->
         <div class="result-screen" data-screen="4">
           <h2 class="result-heading">Hagamos seguimiento</h2>
           <p class="result-sub">Vuelve a hacer el diagnóstico en 30 días y compara tu avance</p>
-
           <div class="reminder-card">
-            <div class="reminder-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5l3 2"/><circle cx="12" cy="13" r="8"/><path d="M9 3h6M12 3v2"/></svg>
-            </div>
-            <p style="font-size:.92rem;color:var(--ink-soft);max-width:30ch;">Guarda este resultado y te recordamos repetir el diagnóstico en un mes</p>
+            <div class="reminder-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5l3 2"/><circle cx="12" cy="13" r="8"/><path d="M9 3h6M12 3v2"/></svg></div>
+            <p style="font-size:.92rem;color:var(--text-soft);max-width:30ch;">Guarda este resultado y te recordamos repetir el diagnóstico en un mes</p>
             <button class="btn btn-secondary" id="btn-save" type="button">Guardar y programar recordatorio</button>
             <span class="reminder-date" id="reminder-date"></span>
           </div>
-
-          <div class="results-nav">
-            <button class="btn btn-primary" id="btn-restart" type="button">Repetir diagnóstico</button>
-          </div>
+          <div class="results-nav"><button class="btn btn-primary" id="btn-restart" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Repetir test en 1 mes</button></div>
         </div>
 
         <div class="dots" id="results-dots" aria-hidden="true">
           <span class="dot is-active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
         </div>
       </section>
+
+      <!-- ============ LOGIN ============ -->
+      <section id="view-login" class="view">
+        <div class="login-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14C5 7 9 3 19 3c0 10-4 14-11 14H5z"/><path d="M5 21c2-5 6-8 10-9"/></svg></div>
+        <h2>Ingresa a EcoHogar</h2>
+        <p>Accede para guardar tus tests y revisar tu historial de recibos simulados.</p>
+        <form id="form-login-eco" onsubmit="return false;">
+          <input type="email" id="login-email" class="login-input" placeholder="Correo electrónico" required autocomplete="username">
+          <input type="password" id="login-pass" class="login-input" placeholder="Contraseña" required autocomplete="current-password">
+          <button type="submit" class="btn-login" id="btn-submit-login">Iniciar sesión</button>
+        </form>
+      </section>
+
+      <!-- ============ PREMIUM (planes y pago simulado) ============ -->
+      <section id="view-premium" class="view">
+        <div class="premium-hero">
+          <span class="premium-kicker">EcoHogar Premium</span>
+          <h2 class="page-heading">Lleva tu ahorro un paso más allá</h2>
+          <p class="page-lede">Tu diagnóstico básico sigue completo y gratis. Premium suma herramientas para ahorrar más: alerta de tramo, simulador “¿y si…?”, retorno de inversión con tus datos, retos de ahorro y un PDF ampliado. Cancela cuando quieras.</p>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-price"><span class="plan-amount">S/ 9.90</span><span class="plan-period">/ mes</span></div>
+          <ul class="plan-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Historial de diagnósticos ilimitado</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>PDF ampliado: proyección anual, plan de 30 días y gráfico de tramos</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Alerta de tramo de tarifa (Pluz y Sedapal)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Simulador “¿y si…?” para probar cambios de hábitos</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Retorno de inversión calculado con tu propio consumo</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Comparar diagnósticos y ver tu evolución</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Retos de ahorro con meta y barra de progreso</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Ajuste con tu recibo real de luz y agua</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Alertas mensuales para repetir tu diagnóstico</li>
+          </ul>
+
+          <div id="premium-area">
+            <button type="button" class="btn btn-primary" id="btn-ir-checkout">Suscribirme</button>
+          </div>
+        </div>
+
+        <p class="premium-disclaimer">Esta es una demo académica: el pago es simulado, no se procesa ningún cobro ni se guardan datos de tarjeta reales.</p>
+      </section>
+
+      <!-- ============ HERRAMIENTAS PREMIUM ============ -->
+      <section id="view-tools" class="view">
+        <h2 class="page-heading">Herramientas Premium</h2>
+        <p class="page-lede">Alerta de tramo, simulador “¿y si…?”, retorno de inversión, comparación de diagnósticos, retos de ahorro y ajuste con tu recibo real.</p>
+        <div id="tools-root"></div>
+      </section>
+
+      <!-- ============ PERFIL ============ -->
+      <section id="view-perfil" class="view">
+        <div id="perfil-bloque-izquierdo"></div>
+        <div id="perfil-bloque-derecho"></div>
+      </section>
+
+      <!-- ============ CÓMO FUNCIONA ============ -->
+      <section id="view-como" class="view">
+        <h2 class="page-heading">Cómo funciona EcoHogar</h2>
+        <p class="page-lede">No necesitas tu recibo de luz ni de agua. Con tus hábitos diarios estimamos en qué se te va el dinero cada mes.</p>
+
+        <div class="step-list">
+          <div class="step-row">
+            <span class="step-num">1</span>
+            <div class="step-body">
+              <h3>Respondes 15 preguntas</h3>
+              <p>Sobre cuánta gente vive en tu casa, tus equipos (terma, TV, aire acondicionado, cocina, lavadora, refrigeradora), tus focos, tus duchas, el riego y las fugas de agua.</p>
+            </div>
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6v3H9z"/><rect x="5" y="5" width="14" height="16" rx="2"/><path d="M9 12h6M9 16h4"/></svg></span>
+          </div>
+          <div class="step-row">
+            <span class="step-num">2</span>
+            <div class="step-body">
+              <h3>Calculamos un estimado en soles</h3>
+              <p>Cada respuesta tiene un costo típico asociado, calibrado con las tarifas reales de luz (Pluz) y agua (Sedapal) de San Juan de Lurigancho. Sumamos todo y ubicamos tu nivel de gasto.</p>
+            </div>
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span>
+          </div>
+          <div class="step-row">
+            <span class="step-num">3</span>
+            <div class="step-body">
+              <h3>Recibes tu diagnóstico</h3>
+              <p>Vemos cuál es tu mayor consumidor y te damos 3 consejos concretos para bajarlo, con el ahorro estimado de cada uno.</p>
+            </div>
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg></span>
+          </div>
+          <div class="step-row">
+            <span class="step-num">4</span>
+            <div class="step-body">
+              <h3>Guardas y comparas en 30 días</h3>
+              <p>Guardamos tu resultado y te recordamos repetir el diagnóstico un mes después, para que veas si tus cambios funcionaron.</p>
+            </div>
+            <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2.2h5c.1-1 .5-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg></span>
+          </div>
+        </div>
+
+        <div class="calc-card">
+          <h3>¿Cómo calculamos?</h3>
+          <p>Cada respuesta suma un consumo mensual típico en kWh. Con el total aplicamos las tarifas de San Juan de Lurigancho (luz de Pluz Energía, agua de Sedapal) y lo convertimos a soles. Esta es la tabla que usamos:</p>
+          <div class="calc-table-wrap">
+            <table class="calc-table calc-table--wrap">
+              <thead><tr><th>Pregunta</th><th>Consumo mensual que sumamos</th></tr></thead>
+              <tbody>
+                <tr><td>Personas en casa</td><td>25 – 55 kWh (router, cargadores, licuadora…) + 80 litros de agua por persona al día</td></tr>
+                <tr><td>Terma eléctrica</td><td>0 – 90 kWh</td></tr>
+                <tr><td>Iluminación nocturna</td><td>2 – 21 kWh</td></tr>
+                <tr><td>TV, computadoras y pantallas</td><td>7 – 29 kWh</td></tr>
+                <tr><td>Ventilador / aire acondicionado</td><td>0 – 90 kWh</td></tr>
+                <tr><td>Cocina eléctrica y microondas</td><td>0 – 60 kWh</td></tr>
+                <tr><td>Lavadora</td><td>0 – 13 kWh + 0.7 a 2.6 m³ de agua</td></tr>
+                <tr><td>Refrigeradora</td><td>30 – 70 kWh</td></tr>
+                <tr><td>Congeladora o 2.ª refrigeradora</td><td>0 – 35 kWh</td></tr>
+                <tr><td>Cargadores enchufados</td><td>0 – 20 kWh</td></tr>
+                <tr><td>Bomba de agua</td><td>0 – 12 kWh</td></tr>
+                <tr><td>Duchas (agua)</td><td>Ducha de 4 a 16 minutos por persona (≈ 9 litros por minuto)</td></tr>
+                <tr><td>Riego y lavado con manguera</td><td>0 – 5 m³ de agua</td></tr>
+                <tr><td>Fugas de agua</td><td>0 – 6 m³ de agua</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4 style="margin:18px 0 8px;">Luz: tarifa Pluz Energía BT5B residencial</h4>
+          <div class="calc-table-wrap">
+            <table class="calc-table calc-table--wrap">
+              <thead><tr><th>Tramo de consumo</th><th>Cómo se cobra (incl. IGV)</th></tr></thead>
+              <tbody>
+                <tr><td>0 – 30 kWh</td><td>S/ 2.67 fijo + S/ 0.5052 por kWh</td></tr>
+                <tr><td>31 – 140 kWh</td><td>S/ 2.67 fijo + S/ 15.15 (primeros 30 kWh) + S/ 0.7217 por kWh adicional</td></tr>
+                <tr><td>Más de 140 kWh</td><td>S/ 2.73 fijo + S/ 0.7390 por kWh</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:.8rem;margin:8px 0 0;">Fuente: Pluz Energía Perú, Pliego Tarifario N° 07-2026 (vigente desde el 04/07/2026), publicado en pluz.pe y osinergmin.gob.pe. San Juan de Lurigancho pertenece a la zona Lima Norte de Pluz.</p>
+
+          <h4 style="margin:18px 0 8px;">Agua: tarifa Sedapal doméstica</h4>
+          <div class="calc-table-wrap">
+            <table class="calc-table calc-table--wrap">
+              <thead><tr><th>Consumo mensual</th><th>Agua + saneamiento por m³</th></tr></thead>
+              <tbody>
+                <tr><td>Cargo fijo</td><td>S/ 6.32 al mes</td></tr>
+                <tr><td>Hasta 10 m³</td><td>S/ 2.20 + S/ 1.38 = S/ 3.58</td></tr>
+                <tr><td>De 10 a 20 m³</td><td>S/ 2.36 + S/ 1.48 = S/ 3.84</td></tr>
+                <tr><td>De 20 a 50 m³</td><td>S/ 3.22 + S/ 1.98 = S/ 5.20</td></tr>
+                <tr><td>Más de 50 m³</td><td>S/ 7.32 + S/ 3.49 = S/ 10.81</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:.8rem;margin:8px 0 0;">Fuente: Sunass, Resolución de Consejo Directivo N° 145-2025-SUNASS-CD (tarifas de Sedapal, no incluyen IGV ni IPM; sumamos 18%). Cada m³ se cobra por tramos. Usamos la categoría Doméstico; los hogares con tarifa social o subsidiada pagan algo menos en el primer tramo.</p>
+
+          <div class="calc-example">
+            <strong>Ejemplo</strong>
+            <p><b>Luz:</b> 3 a 4 personas (40 kWh) + terma de 1 hora (45) + iluminación media (10) + TV y pantallas 3 a 6 horas (12) + lavadora 3 o 4 veces (8) + refrigeradora eficiente (30) + cargadores a veces (8) = 153 kWh. Como supera los 140 kWh: S/ 2.73 + 153 × S/ 0.7390 ≈ S/ 116.<br><b>Agua:</b> 3.5 personas × 80 litros al día (8.4 m³) + duchas moderadas (9.5 m³) + lavadora (1.5 m³) ≈ 19.4 m³. Sedapal: S/ 6.32 + 10 m³ × S/ 3.58 + 9.4 m³ × S/ 3.84, más 18% de impuestos ≈ S/ 92.<br><i>Las demás respuestas del ejemplo: sin aire acondicionado, cocina a gas, sin congeladora, sin bomba, sin riego, sin fugas.</i></p>
+            <div class="calc-total"><span>Gasto estimado: S/ 208</span><span class="level-pill">Nivel MODERADO</span></div>
+          </div>
+          <p class="calc-levels">El nivel depende de cuántas personas viven en casa. 1 a 2 personas: Bajo menos de S/ 90 · Moderado S/ 90 a S/ 150 · Alto más de S/ 150. 3 a 4 personas: Bajo menos de S/ 160 · Moderado S/ 160 a S/ 270 · Alto más de S/ 270. 5 o más: Bajo menos de S/ 215 · Moderado S/ 215 a S/ 360 · Alto más de S/ 360.</p>
+        </div>
+
+        <button class="btn btn-primary" id="btn-start-como" type="button">Comenzar diagnóstico <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </section>
+
+      <!-- ============ ACERCA DE ============ -->
+      <section id="view-acerca" class="view">
+        <div class="about-hero">
+          <img class="brand-mark" src="img/logo.png" alt="Logo de EcoHogar">
+          <div class="about-hero-name">EcoHogar</div>
+          <p class="about-hero-tag">Más conciencia, más ahorro.</p>
+          <div class="about-features">
+            <div class="about-feature"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14C5 7 9 3 19 3c0 10-4 14-11 14H5z"/><path d="M5 21c2-5 6-8 10-9"/></svg></span>Fácil de usar</div>
+            <div class="about-feature"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15.5 14.3c2.6.3 4.5 2.4 4.5 5.7"/></svg></span>Para todas las familias</div>
+            <div class="about-feature"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span>Pensado para el Perú</div>
+          </div>
+          <p class="about-quote">“Un hogar eficiente también es un hogar feliz”</p>
+        </div>
+        <h2 class="page-heading">Acerca de EcoHogar</h2>
+        <p class="page-lede">EcoHogar es una herramienta para entender, en soles, qué hábitos de tu casa más pesan en tu recibo de luz y agua.</p>
+
+        <div class="about-block">
+          <h3>Por qué no pedimos tu recibo</h3>
+          <p>Muchas personas no tienen su recibo a la mano cuando quieren saber en qué están gastando de más. EcoHogar usa tus hábitos declarados en vez del recibo, para que el diagnóstico tome dos minutos y no dependa de ningún documento.</p>
+        </div>
+
+        <div class="about-block">
+          <h3>Qué mide el diagnóstico</h3>
+          <ul class="about-list">
+            <li>Número de personas en el hogar, como base del consumo general</li>
+            <li>Uso de terma eléctrica, uno de los equipos que más electricidad consume</li>
+            <li>Horas de iluminación artificial encendida por la noche</li>
+            <li>Consumo fantasma de cargadores y equipos enchufados sin uso</li>
+            <li>Duchas diarias, ligadas al gasto de agua y de la terma</li>
+            <li>Estado y antigüedad de la refrigeradora y si tienes una congeladora extra</li>
+            <li>TV, computadoras, ventilador o aire acondicionado, y si cocinas con gas o electricidad</li>
+            <li>Cuántas veces lavas ropa y si tienes bomba de agua</li>
+            <li>Riego, lavado con manguera y fugas de agua en caños e inodoro</li>
+            <li>Si tu recibo de agua tiene tarifa social o subsidio</li>
+          </ul>
+        </div>
+
+        <div class="note-panel">
+          <strong>Nota sobre las cifras:</strong> los montos que ves son estimaciones referenciales para hogares de San Juan de Lurigancho, calculadas con la tarifa residencial BT5B de Pluz Energía Perú (Pliego N° 07-2026) y la tarifa doméstica de Sedapal (Sunass, Res. 145-2025). No necesitas tu recibo: usamos tus hábitos para aproximar tu gasto. Tu recibo real puede variar porque incluye otros cargos (como alumbrado público) y porque tus consumos reales no serán exactamente los supuestos. Si vives en otro distrito de Lima, la tarifa de agua es la misma de Sedapal, pero la luz puede ser de Luz del Sur, con otro precio por kWh.
+        </div>
+      </section>
     </main>
 
-    <footer>EcoSfera — estimaciones referenciales para hogares de Lima Metropolitana</footer>
+    <footer>EcoHogar — estimaciones referenciales para hogares de San Juan de Lurigancho</footer>
   </div>
 </div>
 
-<!-- Vinculamos el archivo de lógica JavaScript al final del cuerpo -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
